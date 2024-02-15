@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-of8v@m8-h#*wiez7uxmv&6nf+4=g5!vd@-1w2x@1yad$_%1&4a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -139,3 +139,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3030',
 ]
+
+# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+# WSGI_APPLICATION = 'tutorial.wsgi.application'

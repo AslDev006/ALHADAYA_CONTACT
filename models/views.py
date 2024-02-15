@@ -13,3 +13,11 @@ class ContactCreateView(APIView):
             return Response(serializer.data,
                             status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+class ContactListView(APIView):
+    def get(self, request, format=None):
+        service = Contact.objects.all()
+        serializer = ContactSerializer(service, many=True)
+        return Response(serializer.data)
